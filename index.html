@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link  rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <main>
+    <div class="splitter">
+      <div class="app-title">
+        <h1>Spli</h1>
+        <h1>Tter</h1>
+      </div>
+      <div class="calc-wrapper">
+        <div class="form-input">
+          <div class="input-label">
+            <h2>Bill</h2>
+            <span id="billError">Can't be zero</span>
+          </div>
+          <input type="text" id="bill-input">
+          <h2>Select Tip %</h2>
+          <div class="tip-percent">
+            <input type="button" href="#" class="percent-btn" value="5%">
+            <input type="button" href="#" class="percent-btn" value="10%">
+            <input type="button" href="#" class="percent-btn active" value="15%">
+            <input type="button" href="#" class="percent-btn" value="25%">
+            <input type="button" href="#" class="percent-btn" value="50%">
+            <input type="text" href="#" class="cust-input" placeholder="Custom">
+          </div>
+          <div class="input-label">
+            <h2>Number of People</h2>
+            <span id="peopleError">Can't be zero</span>
+          </div>
+          <input type="text" id="numb-people" class="error">
+        </div>
+        <div class="summary">
+          <div class="sum-tip">
+            <h2 class="sum-label">Tip Amount</h2>
+            <h3 class="sum-info">/ person</h3>
+          </div>
+          <h1 id="tipAmount" class="tip">$4.27</h1>
+          <div class="sum-person">
+            <h2 class="sum-label">Total</h2>
+            <h3 class="sum-info">/ person</h3>
+          </div>
+          <h1 id="totalTip" class="tip">$32.79</h1>
+          <input type="button" value="RESET" class="reset-btn"/>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Eklemis Santo Ndun</a>.
+  </footer>
+</body>
+</html>
