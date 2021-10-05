@@ -7,9 +7,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <link  rel="stylesheet" href="Style.css">
+  <!-- Load Javascript File -->
+  <script src="Script.js"></script>
+  <!-- Load CSS File -->
+  <link  rel="stylesheet" href="Style.css">  
 </head>
 <body>
   <main>
@@ -22,23 +23,23 @@
         <div class="form-input">
           <div class="input-label">
             <h2>Bill</h2>
-            <span id="billError">Can't be zero</span>
+            <span id="billError">Can't be zero/less</span>
           </div>
-          <input type="text" id="bill-input">
+          <input type="number" min="0" id="bill-input" oninput="validate_bill(); display_summary()">
           <h2>Select Tip %</h2>
           <div class="tip-percent">
-            <input type="button" href="#" class="percent-btn" value="5%">
-            <input type="button" href="#" class="percent-btn" value="10%">
-            <input type="button" href="#" class="percent-btn active" value="15%">
-            <input type="button" href="#" class="percent-btn" value="25%">
-            <input type="button" href="#" class="percent-btn" value="50%">
-            <input type="text" href="#" class="cust-input" placeholder="Custom">
+            <input type="button" href="#" class="percent-btn" value="5%" onclick="make_active(this); display_summary()">
+            <input type="button" href="#" class="percent-btn" value="10%" onclick="make_active(this); display_summary()">
+            <input type="button" href="#" class="percent-btn active" value="15%" onclick="make_active(this); display_summary()">
+            <input type="button" href="#" class="percent-btn" value="25%" onclick="make_active(this); display_summary()">
+            <input type="button" href="#" class="percent-btn" value="50%" onclick="make_active(this); display_summary()">
+            <input type="number" min="0" max="100" id="custInput" href="#" class="cust-input" onclick="make_active(this)" oninput="validate_percent(); display_summary()" placeholder="Custom">
           </div>
           <div class="input-label">
             <h2>Number of People</h2>
-            <span id="peopleError">Can't be zero</span>
+            <span id="peopleError">Can't be zero/less</span>
           </div>
-          <input type="text" id="numb-people" class="error">
+          <input type="number" min="0" id="numb-people" oninput="validate_numb_people(); display_summary()" value=1>
         </div>
         <div class="summary">
           <div class="sum-tip">
