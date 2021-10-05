@@ -30,7 +30,7 @@
           <div class="tip-percent">
             <input type="button" href="#" class="percent-btn" value="5%" onclick="make_active(this); display_summary()">
             <input type="button" href="#" class="percent-btn" value="10%" onclick="make_active(this); display_summary()">
-            <input type="button" href="#" class="percent-btn active" value="15%" onclick="make_active(this); display_summary()">
+            <input id="defBtn" type="button" href="#" class="percent-btn active" value="15%" onclick="make_active(this); display_summary()">
             <input type="button" href="#" class="percent-btn" value="25%" onclick="make_active(this); display_summary()">
             <input type="button" href="#" class="percent-btn" value="50%" onclick="make_active(this); display_summary()">
             <input type="number" min="0" max="100" id="custInput" href="#" class="cust-input" onclick="make_active(this)" oninput="validate_percent(); display_summary()" placeholder="Custom">
@@ -46,13 +46,13 @@
             <h2 class="sum-label">Tip Amount</h2>
             <h3 class="sum-info">/ person</h3>
           </div>
-          <h1 id="tipAmount" class="tip">$4.27</h1>
+          <h1 id="tipAmount" class="tip">$0.0</h1>
           <div class="sum-person">
             <h2 class="sum-label">Total</h2>
             <h3 class="sum-info">/ person</h3>
           </div>
-          <h1 id="totalTip" class="tip">$32.79</h1>
-          <input type="button" value="RESET" class="reset-btn"/>
+          <h1 id="totalTip" class="tip">$0.0</h1>
+          <input type="button" value="RESET" class="reset-btn" onclick="reset()"/>
         </div>
       </div>
     </div>

@@ -103,3 +103,21 @@ function display_summary(){
         console.log("Ther is any missing data!")
     }
 }
+
+function reset(){
+    document.getElementById('bill-input').value = "";
+    document.getElementById('numb-people').value = "1";
+    document.getElementById('custInput').value = "";
+    document.getElementById('tipAmount').innerHTML = "$0.0";
+    document.getElementById('totalTip').innerHTML = "$0.0";
+    document.querySelectorAll(".tip-percent input").forEach(function (element){
+        element.removeAttribute('class');
+        if(element.class == "cust-input"){
+            element.setAttribute("class", "percent-btn cust-input");
+        }
+        else{
+            element.setAttribute("class", "percent-btn");
+        }
+    });
+    document.getElementById('defBtn').setAttribute("class", "percent-btn active");
+}
