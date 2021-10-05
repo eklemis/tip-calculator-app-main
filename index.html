@@ -25,21 +25,21 @@
             <h2>Bill</h2>
             <span id="billError">Can't be zero/less</span>
           </div>
-          <input type="number" min="0" id="bill-input" oninput="validate_bill(); display_summary()">
+          <input type="number" min="0" aria-label="bill" id="bill-input" oninput="validate_bill(); display_summary()">
           <h2>Select Tip %</h2>
           <div class="tip-percent">
-            <input type="button" href="#" class="percent-btn" value="5%" onclick="make_active(this); display_summary()">
-            <input type="button" href="#" class="percent-btn" value="10%" onclick="make_active(this); display_summary()">
-            <input id="defBtn" type="button" href="#" class="percent-btn active" value="15%" onclick="make_active(this); display_summary()">
-            <input type="button" href="#" class="percent-btn" value="25%" onclick="make_active(this); display_summary()">
-            <input type="button" href="#" class="percent-btn" value="50%" onclick="make_active(this); display_summary()">
-            <input type="number" min="0" max="100" id="custInput" href="#" class="cust-input" onclick="make_active(this)" oninput="validate_percent(); display_summary()" placeholder="Custom">
+            <input type="button" aria-label="five percent tip" class="percent-btn" value="5%" onclick="make_active(this); display_summary()">
+            <input type="button" aria-label="ten percent tip" class="percent-btn" value="10%" onclick="make_active(this); display_summary()">
+            <input id="defBtn" aria-label="fifteen percent tip" type="button" class="percent-btn active" value="15%" onclick="make_active(this); display_summary()">
+            <input type="button" aria-label="twenty five percent tip" class="percent-btn" value="25%" onclick="make_active(this); display_summary()">
+            <input type="button" aria-label="fifty percent tip" class="percent-btn" value="50%" onclick="make_active(this); display_summary()">
+            <input type="number" aria-label="custom percent tip" min="0" max="100" id="custInput" class="cust-input" onclick="make_active(this)" oninput="validate_percent(); display_summary()" placeholder="Custom">
           </div>
           <div class="input-label">
             <h2>Number of People</h2>
             <span id="peopleError">Can't be zero/less</span>
           </div>
-          <input type="number" min="0" id="numb-people" oninput="validate_numb_people(); display_summary()" value=1>
+          <input type="number" five percent tip="number of people" min="0" id="numb-people" oninput="validate_numb_people(); display_summary()" value=1>
         </div>
         <div class="summary">
           <div class="sum-tip">
@@ -52,7 +52,7 @@
             <h3 class="sum-info">/ person</h3>
           </div>
           <h1 id="totalTip" class="tip">$0.0</h1>
-          <input type="button" value="RESET" class="reset-btn" onclick="reset()"/>
+          <input type="button" aria-label="reset calculator" value="RESET" class="reset-btn" onclick="reset()"/>
         </div>
       </div>
     </div>
