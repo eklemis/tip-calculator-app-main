@@ -108,8 +108,8 @@ function reset(){
     document.getElementById('bill-input').value = "";
     document.getElementById('numb-people').value = "1";
     document.getElementById('custInput').value = "";
-    document.getElementById('tipAmount').innerHTML = "$0.0";
-    document.getElementById('totalTip').innerHTML = "$0.0";
+    document.getElementById('tipAmount').innerHTML = "$0.00";
+    document.getElementById('totalTip').innerHTML = "$0.00";
     document.querySelectorAll(".tip-percent input").forEach(function (element){
         element.removeAttribute('class');
         if(element.class == "cust-input"){
